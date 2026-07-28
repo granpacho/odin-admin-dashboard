@@ -254,6 +254,7 @@ img {
 
 #projects .project > .header {
     font-weight: bold;
+    font-size: 18px;
 }
 
 #projects .project > .description {
@@ -348,6 +349,8 @@ img {
 #side-content #trending .modal .person > .username {
     grid-column: 2/3;
     grid-row: 1/2;
+
+    font-size: 14px;
 }
 
 #side-content #trending .modal .person > .description {
@@ -355,4 +358,5 @@ img {
     grid-row: 2/3;
 
     color: var(--content-color);
+    font-size: 14px;
 }
