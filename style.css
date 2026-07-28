@@ -318,3 +318,41 @@ img {
     font-size: 14px;
     color: var(--content-color);
 }
+
+#side-content #trending .modal {
+    display: grid;
+    gap: 20px;
+}
+
+#side-content #trending .modal .person {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 10px;
+
+    align-items: center;
+}
+
+#side-content #trending .modal .person > img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+
+    background-color: yellow;
+
+}
+
+#side-content #trending .modal .person > .username {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#side-content #trending .modal .person > .description {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    color: var(--content-color);
+}
