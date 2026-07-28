@@ -4,131 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="header">
-        <img class="icons" src="./icons/magnify.svg">
-        <input id="textbox" type="text">
-        <img class="icons" src="./icons/bell-ring-outline.svg">
-        
-        <img id="profile-picture-account" src="./profile-pictures/1200px-Patrick_Star.svg.png">
-        <p id="username-account">granpacho</p>
-        
-        <img id="profile-picture-welcome" src="./profile-pictures/1200px-Patrick_Star.svg.png">
-        <p id="welcome">Hi there,</p>
-        <p id="username-welcome">granpacho</p>
-        <p id="tag-welcome">(@granpacho)</p>
+        <div id="search">
+            <img class="icon" src="./icons/magnify.svg">
+            <input type="text">
+        </div>
 
-        <button>New</button>
-        <button>Upload</button>
-        <button>Share</button>
+        <div id="account"> 
+            <img class="icon" src="./icons/bell-ring-outline.svg">
+            <img class="profile-picture" src="./profile-pictures/1200px-Patrick_Star.svg.png">
+            <p class="username">granpacho</p>
+        </div>
+
+        <div id="welcome">
+            <img class="profile-picture" src="./profile-pictures/1200px-Patrick_Star.svg.png">
+            <div> 
+                <p id="welcome-text">Hi there,</p>
+                <p class="username">granpacho (@granpacho)</p>
+            </div>
+        </div>
+
+        <div id= "buttons">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button> 
+        </div>
     </div>
 
     <div id="sidebar">
-        <img id="dashboard-icon" src="./icons/view-dashboard.svg"> 
-        <p id="dashboard-text">Dashboard</p>
+        <div id="dashboard" class="sidebar-item">
+            <img class="icon" src="./icons/view-dashboard.svg"> 
+            <p id="dashboard-text">Dashboard</p>
+        </div>
+        
+        <div id="information"> 
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/home.svg">
+                <p class="sidebar-text">Home</p>
+            </div>
 
-        <img class="icon" src="./icons/home.svg">
-        <p class="sidebar-text">Home</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/card-account-details.svg">
+                <p class="sidebar-text">Profile</p>
+            </div>
 
-        <img class="icon" src="./icons/card-account-details.svg">
-        <p class="sidebar-text">Profile</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/message-reply.svg">
+                <p class="sidebar-text">Messages</p>
+            </div>
 
-        <img class="icon" src="./icons/message-reply.svg">
-        <p class="sidebar-text">Messages</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/clock-time-three.svg">
+                <p class="sidebar-text">History</p>
+            </div>
 
-        <img class="icon" src="./icons/clock-time-three.svg">
-        <p class="sidebar-text">History</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/note-multiple.svg">
+                <p class="sidebar-text">Tasks</p>
+            </div>
 
-        <img class="icon" src="./icons/note-multiple.svg">
-        <p class="sidebar-text">Tasks</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/account-group.svg">
+                <p class="sidebar-text">Communities</p>
+            </div>
+        </div>      
 
-        <img class="icon" src="./icons/account-group.svg">
-        <p class="sidebar-text">Communities</p>
+        <div id="settings">
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/cog.svg">
+                <p class="sidebar-text">Settings</p>
+            </div>
 
-        <img class="icon" src="./icons/cog.svg">
-        <p class="sidebar-text">Settings</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/help-box.svg">
+                <p class="sidebar-text">Support</p>
+            </div>
 
-        <img class="icon" src="./icons/help-box.svg">
-        <p class="sidebar-text">Support</p>
-
-        <img id="dashboard-icon" src="./icons/view-dashboard.svg"> 
-        <p id="dashboard-text">Dashboard</p>
-
-        <img class="icon" src="./icons/home.svg">
-        <p class="sidebar-text">Home</p>
-
-        <img class="icon" src="./icons/card-account-details.svg">
-        <p class="sidebar-text">Profile</p>
-
-        <img class="icon" src="./icons/message-reply.svg">
-        <p class="sidebar-text">Messages</p>
-
-        <img class="icon" src="./icons/clock-time-three.svg">
-        <p class="sidebar-text">History</p>
-
-        <img class="icon" src="./icons/note-multiple.svg">
-        <p class="sidebar-text">Tasks</p>
-
-        <img class="icon" src="./icons/account-group.svg">
-        <p class="sidebar-text">Communities</p>
-
-        <img class="icon" src="./icons/cog.svg">
-        <p class="sidebar-text">Settings</p>
-
-        <img class="icon" src="./icons/shield-check.svg">
-        <p class="sidebar-text">Privacy</p>
+            <div class="sidebar-item">
+                <img class="icon" src="./icons/shield-check.svg">
+                <p class="sidebar-text">Privacy</p>
+            </div>
+        </div>
     </div>
 
-    <div id="your-projects">
-        
-        <p id="your-projects-text">Your Projects</p>
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
+    <div id="content">
+
+        <p class="area-header">Your Projects</p>
+
+        <div id="projects">
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+
+            <div class="project">
+                <p class="header">Super Cool Project</p>
+                <p class="description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="icons">
+                    <img class="icon" src="./icons/star-plus-outline.svg">
+                    <img class="icon" src="./icons/eye-plus-outline.svg">
+                    <img class="icon" src="./icons/source-fork.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="side-content">
+        <div class="area" id="announcements"> 
+            <p class="area-header">Announcements</p>
+
+            <div class="modal">
+
+                <div class="announcement">
+                    <p class="header">Site Maintenance</p>
+                    <p class="content">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                </div>
+
+                <div class="announcement">
+                    <p class="header">Community Share Day</p>
+                    <p class="content">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                </div>
+
+                <div class="announcement">
+                    <p class="header">Updated Privacy Policy</p>
+                    <p class="content">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                </div>
+
+            </div>
         </div>
 
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
-        </div>
+        <div class="area" id="trending">
+            <p class="area-header">Trending</p>
+            
+            <div class="modal">
 
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
-        </div>
+                <div class="person">
+                    <img src="./profile-pictures/378de11c-7f0e-4ebe-b16d-c0dc7d7872f1_rw_1920.png">
+                    <div>
+                        <p class="username">@tegan</p>
+                        <p class="description">World Peace Builder</p>
+                    </div>
+                </div>
 
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
-        </div>
+                <div class="person">
+                    <img src="profile-pictures/1200px-Patrick_Star.svg.png">
+                    <div>
+                        <p class="username">@granpacho</p>
+                        <p class="description">Super Cool Project</p>
+                    </div>
+                </div>
 
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
-        </div>
+                <div class="person">
+                    <img src="profile-pictures/3bc14ec04733bd8d67beec257e96210d.png">
+                    <div>
+                        <p class="username">@kendall</p>
+                        <p class="description">Life Changing App</p>
+                    </div>
+                </div>
 
-        <div class="project">
-            <p class="project-header">Super Cool Project</p>
-            <p class="project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-            <img class="icon" src="./icons/star-plus-outline.svg">
-            <img class="icon" src="./icons/eye-plus-outline.svg">
-            <img class="icon" src="./icons/source-fork.svg">
+                <div class="person">
+                    <img src="./profile-pictures/New_Project.png">
+                    <div>
+                        <p class="username">@alex</p>
+                        <p class="description">No Traffic Maker</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
