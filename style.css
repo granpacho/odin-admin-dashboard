@@ -281,6 +281,7 @@ img {
 
     display: grid;
     grid-template-rows: 1fr 1fr;
+    gap: 20px;
 }
 
 #side-content .modal {
